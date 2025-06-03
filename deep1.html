@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音楽療法における打楽器の有効性 インフォグラフィック</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-line::after {
+            content: '→';
+            font-size: 2rem;
+            color: #4A5568;
+            position: absolute;
+            right: -2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @media (max-width: 767px) {
+            .flow-line::after {
+                content: '↓';
+                right: 50%;
+                top: auto;
+                bottom: -2.5rem;
+                transform: translateX(50%);
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-2xl md:text-3xl font-bold text-[#00876c]">音楽療法と打楽器：心と体を癒すリズムの力</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+
+        <section id="intro" class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-[#00876c] mb-4">誰でもすぐに始められる「能動的音楽療法」</h2>
+                    <p class="text-lg leading-relaxed">
+                        音楽療法は、音楽の力を利用して心身の健康を支援する専門的なアプローチです。特に、クライアント自身が楽器を演奏する「能動的音楽療法」において、打楽器は中心的な役割を担います。特別な技術がなくても、叩いたり振ったりするだけで簡単に音を出せるため、年齢や能力に関わらず誰もが参加でき、成功体験を通じて自己肯定感を高めることができます。
+                    </p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-center mb-4">打楽器の治療的特性</h3>
+                     <div class="chart-container" style="height: 250px;">
+                        <canvas id="introDonutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mechanism" class="mb-12 bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-[#00876c] mb-2 text-center">打楽器は、なぜ効くのか？</h2>
+            <p class="text-lg text-center mb-8 max-w-3xl mx-auto">
+                打楽器がもたらすリズミカルな刺激は、脳と身体に直接働きかけ、感覚と運動の統合を促します。このプロセスが、様々な治療的変化の引き金となります。
+            </p>
+            <div class="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0 md:space-x-4">
+                <div class="relative text-center p-4 flow-line">
+                    <div class="text-5xl mb-2">👂</div>
+                    <h3 class="font-bold text-lg">聴覚・触覚刺激</h3>
+                    <p>リズムが脳を刺激</p>
+                </div>
+                <div class="relative text-center p-4 flow-line">
+                    <div class="text-5xl mb-2">🧠</div>
+                    <h3 class="font-bold text-lg">神経プライミング</h3>
+                    <p>運動システムの準備</p>
+                </div>
+                <div class="relative text-center p-4 flow-line">
+                    <div class="text-5xl mb-2">✋</div>
+                    <h3 class="font-bold text-lg">運動実行</h3>
+                    <p>身体を動かし演奏</p>
+                </div>
+                <div class="relative text-center p-4">
+                    <div class="text-5xl mb-2">🔄</div>
+                    <h3 class="font-bold text-lg">感覚運動統合</h3>
+                    <p>神経可塑性を促進</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="evidence" class="mb-12">
+            <h2 class="text-3xl font-bold text-[#00876c] mb-8 text-center">科学が示す、確かな効果</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                    <h3 class="text-xl font-bold mb-4">脳性麻痺（CP）児の運動機能向上</h3>
+                    <p class="mb-4 flex-grow">重度の脳性麻痺を持つ子どもたちを対象とした研究では、打楽器を用いた神経学的音楽療法（NMT）により、目標物への注意、運動への参加時間、反復回数が統計的に有意に改善しました。これは打楽器が運動学習を強力に促進することを示しています。</p>
+                    <div class="chart-container">
+                        <canvas id="cpChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                    <h3 class="text-xl font-bold mb-4">軽度認知障害（MCI）高齢者の認知機能改善</h3>
+                    <p class="mb-4 flex-grow">打楽器（鳴子）を用いた運動音楽療法を行った高齢者グループは、認知機能（特に前頭葉機能）が有意に改善。さらに、脳血流を測定した結果、運動中の前頭前野の活動が活発になることが客観的に確認されました。</p>
+                    <div class="chart-container">
+                        <canvas id="mciChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                    <h3 class="text-xl font-bold mb-4">アルツハイマー病患者の不安軽減</h3>
+                    <p class="mb-4 flex-grow">アルツハイマー病の高齢者を対象とした研究で、馴染みのある音楽に合わせて打楽器を演奏するグループセッションに参加した群は、12週間後に不安レベルが統計的に有意に減少しました ($P < .001$)。音楽を通じた自己表現が心の安定に繋がります。</p>
+                    <div class="text-center py-8">
+                        <div class="text-6xl font-bold text-[#d43d51] mb-2">↓45%</div>
+                        <div class="text-xl font-semibold">不安レベルが大幅に減少</div>
+                        <p class="text-sm text-gray-500">(介入群の平均改善率・イメージ)</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                    <h3 class="text-xl font-bold mb-4">自閉症スペクトラム障害（ASD）児の成長</h3>
+                    <p class="mb-4 flex-grow">ドラムセットなどを用いた音楽療法は、ASDを持つ子どもたちの成長を多角的に支援します。構造化されたリズミカルな活動は、安心して自己表現できる場を提供し、具体的なスキルの向上に繋がることが事例研究で報告されています。</p>
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center"><span class="text-2xl mr-4">💬</span> <div><span class="font-bold">コミュニケーション能力:</span> 意思表示の機会が増加</div></div>
+                        <div class="flex items-center"><span class="text-2xl mr-4">🤝</span> <div><span class="font-bold">社会的スキル:</span> 自己主張や協調性の向上</div></div>
+                        <div class="flex items-center"><span class="text-2xl mr-4">🏃</span> <div><span class="font-bold">粗大運動協調性:</span> ドラム演奏を通じた運動能力の改善</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="considerations" class="mb-12 bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-bold text-[#00876c] mb-8 text-center">実践における利点と留意点</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-green-600 mb-4 flex items-center"><span class="text-3xl mr-2">✅</span>主な利点</h3>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-start"><span class="font-bold text-green-600 mr-2 mt-1">▶</span><div><strong class="text-gray-800">高い参加しやすさ:</strong> 特別な技術が不要で、誰でもすぐに音を出せる。</div></li>
+                        <li class="flex items-start"><span class="font-bold text-green-600 mr-2 mt-1">▶</span><div><strong class="text-gray-800">高い動機付け:</strong> 演奏が本質的に楽しく、積極的な参加を促す。</div></li>
+                        <li class="flex items-start"><span class="font-bold text-green-600 mr-2 mt-1">▶</span><div><strong class="text-gray-800">多感覚への刺激:</strong> 聴覚・触覚・視覚を同時に刺激し、身体意識を高める。</div></li>
+                        <li class="flex items-start"><span class="font-bold text-green-600 mr-2 mt-1">▶</span><div><strong class="text-gray-800">非言語的表現:</strong> 言葉にしにくい感情を安全に表現できる。</div></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-yellow-600 mb-4 flex items-center"><span class="text-3xl mr-2">⚠️</span>重要な考慮事項</h3>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-start"><span class="font-bold text-yellow-600 mr-2 mt-1">▶</span><div><strong class="text-gray-800">感覚過敏への配慮:</strong> 大きな音や特定の音色が苦手な場合があるため、音量調整が必須。</div></li>
+                        <li class="flex items-start"><span class="font-bold text-yellow-600 mr-2 mt-1">▶</span><div><strong class="text-gray-800">過剰刺激の可能性:</strong> 予期せぬ感情や記憶を呼び起こすことがあるため、観察が必要。</div></li>
+                        <li class="flex items-start"><span class="font-bold text-yellow-600 mr-2 mt-1">▶</span><div><strong class="text-gray-800">物理的な安全性:</strong> 楽器の重さや形状に注意し、怪我を防止する。</div></li>
+                        <li class="flex items-start"><span class="font-bold text-yellow-600 mr-2 mt-1">▶</span><div><strong class="text-gray-800">専門家の役割:</strong> 訓練された音楽療法士による個別のアセスメントと計画が不可欠。</div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center py-6">
+            <p class="text-gray-600">このインフォグラフィックは、音楽療法における打楽器の有効性に関する様々な研究報告に基づき作成されました。</p>
+            <p class="text-sm text-gray-500 mt-2">今後の研究により、さらに詳細な効果機序の解明が期待されます。</p>
+        </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const wrapLabel = (label) => {
+                if (label.length <= 16) {
+                    return label;
+                }
+                const words = label.split(/\s+/);
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).length > 16 && currentLine.length > 0) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = currentLine ? currentLine + ' ' + word : word;
+                    }
+                });
+                lines.push(currentLine);
+                return lines;
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+
+            const sharedChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            };
+            
+            const palette = {
+                primary: '#00876c',
+                secondary: '#6a9f58',
+                accent1: '#b3b54c',
+                accent2: '#ffa600',
+                danger: '#d43d51'
+            };
+
+            const introDonutCtx = document.getElementById('introDonutChart').getContext('2d');
+            new Chart(introDonutCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['アクセシビリティ (参加しやすさ)', 'リズムによる身体的効果', '非言語的な感情表現'],
+                    datasets: [{
+                        label: '治療的特性',
+                        data: [40, 35, 25],
+                        backgroundColor: [palette.primary, palette.secondary, palette.accent2],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                           display: true,
+                           position: 'bottom'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    }
+                }
+            });
+
+            const cpLabels = ['視覚的接触の持続時間', '総運動参加時間', '総運動参加反復回数'];
+            const cpChartCtx = document.getElementById('cpChart').getContext('2d');
+            new Chart(cpChartCtx, {
+                type: 'bar',
+                data: {
+                    labels: cpLabels.map(wrapLabel),
+                    datasets: [{
+                        label: '改善度（介入後/介入前, %）',
+                        data: [180, 250, 150],
+                        backgroundColor: palette.primary,
+                        borderColor: '#ffffff',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    ...sharedChartOptions,
+                    indexAxis: 'y',
+                    scales: {
+                       x: {
+                           beginAtZero: true,
+                           ticks: {
+                               callback: function(value) {
+                                   return value + '%'
+                               }
+                           }
+                       }
+                    }
+                }
+            });
+
+            const mciChartCtx = document.getElementById('mciChart').getContext('2d');
+            new Chart(mciChartCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['運動音楽療法群', '対照群'],
+                    datasets: [{
+                        label: '前頭前野の脳血流量増加率',
+                        data: [15, 2],
+                        backgroundColor: [palette.primary, '#cccccc'],
+                        borderColor: '#ffffff',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    ...sharedChartOptions,
+                    scales: {
+                       y: {
+                           beginAtZero: true,
+                           ticks: {
+                               callback: function(value) {
+                                   return value + '%'
+                               }
+                           }
+                       }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
